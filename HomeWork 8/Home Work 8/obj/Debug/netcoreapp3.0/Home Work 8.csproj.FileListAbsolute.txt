@@ -1,0 +1,11 @@
+D:\VisualStudio\report\Home Work 8\Home Work 8\bin\Debug\netcoreapp3.0\Home Work 8.exe
+D:\VisualStudio\report\Home Work 8\Home Work 8\bin\Debug\netcoreapp3.0\Home Work 8.deps.json
+D:\VisualStudio\report\Home Work 8\Home Work 8\bin\Debug\netcoreapp3.0\Home Work 8.runtimeconfig.json
+D:\VisualStudio\report\Home Work 8\Home Work 8\bin\Debug\netcoreapp3.0\Home Work 8.runtimeconfig.dev.json
+D:\VisualStudio\report\Home Work 8\Home Work 8\bin\Debug\netcoreapp3.0\Home Work 8.dll
+D:\VisualStudio\report\Home Work 8\Home Work 8\bin\Debug\netcoreapp3.0\Home Work 8.pdb
+D:\VisualStudio\report\Home Work 8\Home Work 8\obj\Debug\netcoreapp3.0\Home Work 8.csprojAssemblyReference.cache
+D:\VisualStudio\report\Home Work 8\Home Work 8\obj\Debug\netcoreapp3.0\Home Work 8.AssemblyInfoInputs.cache
+D:\VisualStudio\report\Home Work 8\Home Work 8\obj\Debug\netcoreapp3.0\Home Work 8.AssemblyInfo.cs
+D:\VisualStudio\report\Home Work 8\Home Work 8\obj\Debug\netcoreapp3.0\Home Work 8.dll
+D:\VisualStudio\report\Home Work 8\Home Work 8\obj\Debug\netcoreapp3.0\Home Work 8.pdb

@@ -1,0 +1,6 @@
+D:\VisualStudio\report\HomeWork 1\HomeWork 1\bin\Debug\HomeWork 1.exe.config
+D:\VisualStudio\report\HomeWork 1\HomeWork 1\bin\Debug\HomeWork 1.exe
+D:\VisualStudio\report\HomeWork 1\HomeWork 1\bin\Debug\HomeWork 1.pdb
+D:\VisualStudio\report\HomeWork 1\HomeWork 1\obj\Debug\HomeWork 1.csprojAssemblyReference.cache
+D:\VisualStudio\report\HomeWork 1\HomeWork 1\obj\Debug\HomeWork 1.exe
+D:\VisualStudio\report\HomeWork 1\HomeWork 1\obj\Debug\HomeWork 1.pdb
