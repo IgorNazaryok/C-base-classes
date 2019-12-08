@@ -1,0 +1,11 @@
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\obj\Debug\netcoreapp3.0\2 Home work 2.csprojAssemblyReference.cache
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\obj\Debug\netcoreapp3.0\2 Home work 2.AssemblyInfoInputs.cache
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\obj\Debug\netcoreapp3.0\2 Home work 2.AssemblyInfo.cs
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\bin\Debug\netcoreapp3.0\2 Home work 2.exe
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\bin\Debug\netcoreapp3.0\2 Home work 2.deps.json
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\bin\Debug\netcoreapp3.0\2 Home work 2.runtimeconfig.json
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\bin\Debug\netcoreapp3.0\2 Home work 2.runtimeconfig.dev.json
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\bin\Debug\netcoreapp3.0\2 Home work 2.dll
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\bin\Debug\netcoreapp3.0\2 Home work 2.pdb
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\obj\Debug\netcoreapp3.0\2 Home work 2.dll
+D:\VisualStudio\report\2 Home work 2\2 Home work 2\obj\Debug\netcoreapp3.0\2 Home work 2.pdb
