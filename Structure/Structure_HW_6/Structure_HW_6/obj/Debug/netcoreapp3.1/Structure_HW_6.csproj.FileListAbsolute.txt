@@ -1,0 +1,11 @@
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\bin\Debug\netcoreapp3.1\Structure_HW_6.exe
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\bin\Debug\netcoreapp3.1\Structure_HW_6.deps.json
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\bin\Debug\netcoreapp3.1\Structure_HW_6.runtimeconfig.json
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\bin\Debug\netcoreapp3.1\Structure_HW_6.runtimeconfig.dev.json
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\bin\Debug\netcoreapp3.1\Structure_HW_6.dll
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\bin\Debug\netcoreapp3.1\Structure_HW_6.pdb
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\obj\Debug\netcoreapp3.1\Structure_HW_6.csprojAssemblyReference.cache
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\obj\Debug\netcoreapp3.1\Structure_HW_6.AssemblyInfoInputs.cache
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\obj\Debug\netcoreapp3.1\Structure_HW_6.AssemblyInfo.cs
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\obj\Debug\netcoreapp3.1\Structure_HW_6.dll
+D:\VisualStudio\report\Structure_HW_6\Structure_HW_6\obj\Debug\netcoreapp3.1\Structure_HW_6.pdb
