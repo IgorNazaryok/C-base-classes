@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+function inArray(arr) {
+  return function(x) {
+    return arr.includes(x);
+  };
+}
+
+ let scheme =
+["A1", "C1", "B2",
+"B3", "D2", "E2",
+"E4", "E5", "A5"];
+let input = ["A1", "B2", "C3", "D4", "E5", "E4"];
+
+
+class Battleship {
+
+    
+constructor(scheme, input)
+ {
+    this.scheme=scheme;
+    this.input=input; 
+    this._board =[]; 
+    this._points=0;
+         
+   
+
+ }
+board() 
+{
+    for (let row = 0; row < 5; row++)
+			{
+				this._board.push([]);
+				
+				for (let col = 0; col < 5; col++)
+					{
+						this._board[row].push("○");
+					}
+			}
+
+  // alert("this.board= o "+ this.board) 
+    let _enum = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4};
+    for (let ship of scheme)
+    {
+        let row = _enum[ship[0]];
+        let col = parseInt(ship[1]) - 1;
+        
+        this._board[row][col] ="●";
+        
+     }
+   //  alert("this.board= ● "+ this.board) 
+    for (let shot of input)
+    {
+        let row = _enum[shot[0]];
+        let col = parseInt(shot[1]) - 1;
+         if (this._board[row][col] == "●")
+        {
+            this._board[row][col] ="☀";
+
+        }
+			else
+					{
+						this._board[row][col] = "☼";
+					}
+     }  
+  //   alert("this.board= ☀ "+ this.board)       
+     return this._board;
+}
+hits() 
+{
+    function inArray(arr) {
+  return function(x) {
+    return arr.includes(x);
+  };
+}
+//this.scheme.filter(inArray(input));
+   let hits=0; // = (this.scheme.filter(inArray([this.input]))).length; 
+   
+    for (let row = 0; row < 5; row++)
+        {
+            for (let col = 0; col < 5; col++)
+                {            
+                 if (this._board[row][col] =="☀")
+                        {
+                         hits++;
+                         this._points++;
+                        }    
+                }        
+        } 
+        
+       alert("hits= "+ hits)
+     return hits;
+
+}
+sunk() 
+{
+    let sunk=0;
+    for (let row = 0; row < 5; row++)
+			{
+				for (let col = 0; col < 5; col++)
+					{
+						if ((this._board[row][col] === "☀" && this._board[row + 1] !== undefined && this._board[row + 1][col] === "☀")
+								|| (this._board[row][col] === "☀"  && this._board[row][col + 1] !== undefined && this._board[row][col + 1] === "☀"))
+											{			
+                       sunk ++;
+                      }
+          }
+       }
+        alert("sunk= "+ sunk)
+        return sunk;
+
+}
+points() 
+{
+    let points=0;
+    for (let row = 0; row < 5; row++)
+			{
+				for (let col = 0; col < 5; col++)
+					{
+						if ((this._board[row][col] === "☀" && this._board[row + 1] !== undefined && this._board[row + 1][col] === "☀")
+								|| (this._board[row][col] === "☀"  && this._board[row][col + 1] !== undefined && this._board[row][col + 1] === "☀"))
+											{								
+                            this._points += 2;								
+                       }
+          }
+        }
+        alert("point= "+ this._points)
+        return this._points;
+}
+}
+battleship = new Battleship();
+battleship.board();
+battleship.hits();
+battleship.sunk();
+battleship.points();
+        
+   </script>
+</body>
+</html>
