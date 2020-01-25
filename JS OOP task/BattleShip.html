@@ -23,8 +23,7 @@ constructor(scheme, input)
     this.scheme=scheme;
     this.input=input; 
     this._board =[]; 
-    this._points=0;
-         
+     this._points=0;    
    
 
  }
@@ -42,7 +41,7 @@ board()
 
   // alert("this.board= o "+ this.board) 
     let _enum = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4};
-    for (let ship of scheme)
+    for (let ship of this.scheme)
     {
         let row = _enum[ship[0]];
         let col = parseInt(ship[1]) - 1;
@@ -51,7 +50,7 @@ board()
         
      }
    //  alert("this.board= ● "+ this.board) 
-    for (let shot of input)
+    for (let shot of this.input)
     {
         let row = _enum[shot[0]];
         let col = parseInt(shot[1]) - 1;
@@ -85,12 +84,12 @@ hits()
                  if (this._board[row][col] =="☀")
                         {
                          hits++;
-                         this._points++;
+													this._points++;
                         }    
                 }        
         } 
         
-       alert("hits= "+ hits)
+     //   alert("hits= "+ hits)
      return hits;
 
 }
@@ -108,7 +107,7 @@ sunk()
                       }
           }
        }
-        alert("sunk= "+ sunk)
+      //  alert("sunk= "+ sunk)
         return sunk;
 
 }
@@ -126,7 +125,7 @@ points()
                        }
           }
         }
-        alert("point= "+ this._points)
+      //  alert("point= "+ points)
         return this._points;
 }
 }
