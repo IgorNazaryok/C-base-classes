@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url("style.css");
+
+    </style>
+<body>
+    <form name="Form">     
+<div>
+  <ul class="list">
+   <li class="name_hotel">hotel 1</li>
+   <li class="name_hotel">hotel 2</li> 
+   <li class="name_hotel">hotel 3</li>
+ </ul>
+ <ul class="list">
+   <li class="hotel img_1"></li>  
+   <li class="hotel img_2"></li> 
+   <li class="hotel img_3"></li>  
+ </ul>
+ <ul class="radio-list" >
+            <li class="radio-item">
+                <input type="radio" name="State" value="studio"  onclick="b(1,'room')"/>         
+            </li>
+            <li class="radio-item">
+                <input type="radio" name="State" value="1bed" onclick="b(1,'room')"/>                
+            </li>
+            <li class="radio-item">
+                <input type="radio" name="State" value="2bed" onclick="b(1,'room')"/>                
+            </li>
+ </ul>
+ 
+</div>
+<div >
+  <input id="startdate" type="date"  onmouseover="b(0,'startdate')" oninput="b(1,'startdate')">
+  <input id="enddate" type="date"  onmouseover="b(0,'enddate')" oninput="b(1,'enddate')">
+</div>
+
+<div><button onClick="calc(); return false;">calculate</button></div>
+<div>
+  <input type="text" readonly id="sum" value="0" onmouseover="b(0,'sum')">
+</div>    
+</form>   
+</body>
+<script src="my_script.js"> </script>
+
+</body>
+</html>
