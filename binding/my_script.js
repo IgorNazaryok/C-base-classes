@@ -30,5 +30,7 @@ function mybinder(i, _string) {
       if(pricing[model.room]) {
         model.sum = pricing[model.room] * days;        
       }
-    }      
+    } 
+    let str = "Стоимость "+ days +" в выбранном отеле стоит " +sum;  
+    sum.value=str;   
   }
