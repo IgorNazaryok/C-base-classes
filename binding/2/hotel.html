@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url("style.css");
+
+    </style>
+<body>
+    <form name="Form">     
+<div>
+  <ul class="list">
+   <li class="name_hotel">hotel 1</li>
+   <li class="name_hotel">hotel 2</li> 
+   <li class="name_hotel">hotel 3</li>
+ </ul>
+ <ul class="list">
+   <li class="hotel img_1"></li>  
+   <li class="hotel img_2"></li> 
+   <li class="hotel img_3"></li>  
+ </ul>
+ <!--bind-attribute="hotel" -->
+   <select bind-attribute="hotel">
+    <option value="studio">hotel1</option>
+    <option value="1bed">hotel2</option>
+    <option value="2bed">hotel3</option>
+  </select> 
+</div>
+<!-- Date -->
+<div >
+  <input bind-attribute="startdate" type="date" >
+  <input bind-attribute="enddate" type="date">
+</div>
+<!-- Summa -->
+<div>  
+  <textarea type="text" readonly bind-attribute="summa" class="js_sum"></textarea>
+</div>    
+</form>   
+</body>
+<script src="databinding.js"></script>
+<script> 
+  const pricing = {
+    "studio": 10,
+    "1bed": 15,
+    "2bed": 20
+  }
+  let model = {
+    startdate: "2020-02-20",
+    enddate: "2020-02-22",
+    room: "2bed",
+    sum: 30
+  }
+ 
+function mybinder(i, _string) {
+  
+  if(i)
+  {     
+    this[_string]=event.target.value;   
+      }
+  else 
+  {
+    event.target.value=this[_string];
+  }
+}
+  var b=mybinder.bind(model);
+ 
+  
+</script>
+
+</body>
+</html>

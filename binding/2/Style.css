@@ -1,0 +1,70 @@
+body {
+	
+	
+}
+form {
+    width: 600px;
+    height: 450px;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, .5);
+    background: #459;
+	color: white;
+	font-family: 'Lato';
+	font-weight: 400;
+	line-height: 1.5;
+}
+  
+
+ul {
+	list-style-type: none;	
+	padding:00;
+	display: flex;
+	
+}
+.name_hotel{
+  width: 150px;  
+  margin: 0 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  color:red;
+  text-align:center;
+  
+}
+
+.hotel{
+  
+  width:150px;
+  min-width: 150px;
+	height:150px;
+	margin: 0 20px;
+  border-radius: 10px;
+	background-color: #444;  
+    border: 3px solid white;
+    background-image: url(3.jpg);
+}
+
+.img_1{
+    background-image: url(1.jpg);
+  }
+.img_2{
+    background-image: url(2.jpg);
+  }
+
+.img_3{
+    background-image: url(3.jpg);
+  }
+
+.radio-item{
+  width: 150px;
+  margin: 0 20px;
+  font-weight: bold;
+  color:red;
+  text-align:center;
+  
+}
+textarea{
+  width:400px;
+  background: #459;
+  height:30px; 
+  resize: none;
+  color:greenyellow;
+}
