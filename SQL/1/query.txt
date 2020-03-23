@@ -1,0 +1,164 @@
+- диагнозы, которые были поставлены за последний месяц в порядке убывания их частоты за все время
+use hospital;
+SELECT Diagnosis, COUNT(*) AS Quantity
+FROM Diagnoses
+GROUP BY Diagnosis
+ORDER BY Quantity DESC
+
+Diagnosis	Quantity
+Растяжение	3
+Ушиб	3
+Аритмия	2
+ОРВ	2
+Перелом	2
+Грыжа	1
+Диарея	1
+Тахикардия	1
+------------------------------------------------------------
+- статистику по отделениям: вывести для каждого отделения врача, 
+который больше всего работал и самый частый диагноз (по всем врачам) за последние две недели
+use hospital;
+SELECT Units.name, Doctors.FirstName, Doctors.LastName, SUM(DATEDIFF(minute,StartApp, EndApp)) as Times into MaxJob FROM Doctors, Appointments,Units
+where Doctors.Id=Appointments.DoctorId and Doctors.UnitId=Units.id
+GROUP BY Units.name, Doctors.FirstName, Doctors.LastName
+ORDER BY Units.name
+
+SELECT * from MaxJob as Tab
+where Times=(select max(Times) from MaxJob where Tab.Name=MaxJob.Name)
+
+name	FirstName	LastName	Times
+Хирургическое	Владимитр	Данилов	50
+Травмотрология	Николай	Семёнов	40
+Терапевтическое	Людмила	Тихомирова	50
+Кардиологическое	Андрей	Иванов	20
+Кардиологическое	Татьяна	Самсонова	20
+
+
+use hospital;
+SELECT Diagnosis, count(*) as Quantity INTO DiagnosesQuantity FROM Diagnoses
+GROUP BY Diagnosis
+SELECT Diagnosis, Quantity from DiagnosesQuantity
+where Quantity=(SELECT max(Quantity) from DiagnosesQuantity)
+
+Diagnosis	Quantity
+Растяжение	3
+Ушиб	3
+------------------------------------------------------------
+- ПЕРЕРЫВЫ В РАБОТЕ ВРАЧА БОЛЕЕ ЧЕМ 30 МИНУТ, ВЫВОДЯТСЯ ПО УМЕНЬШЕНИЮ ДЛИТЕЛЬНОСТИ ПЕРЕРЫВА. 
+ВЫВОДИТЬ НУЖНО КОЛОНКИ ИМЯ ВРАЧА, ЕГО ОТДЕЛЕНИЕ, ДАТА И ВРЕМЯ НАЧАЛА ПЕРЕРЫВА, ЛИТЕЛЬНОСТЬ И КОНЕЦ ПЕРЕВА.
+
+use hospital;
+SELECT Doctors.FirstName, Doctors.LastName,Units.name, 
+(select min(EndApp) from Appointments as Tab  where Appointments.DoctorId=Tab.DoctorId) as StartBreak,
+(select max(StartApp) from Appointments as Tab  where Appointments.DoctorId=Tab.DoctorId) as EndBreak,
+DATEDIFF(minute,(select min(EndApp) from Appointments as Tab  where Appointments.DoctorId=Tab.DoctorId), 
+(select max(StartApp) from Appointments as Tab  where Appointments.DoctorId=Tab.DoctorId)) as TimeBreak
+FROM Doctors, Appointments,Units
+where (Doctors.Id=Appointments.DoctorId and Doctors.UnitId=Units.id) and 
+(DATEDIFF(minute,(select min(EndApp) from Appointments as Tab  where Appointments.DoctorId=Tab.DoctorId), 
+(select max(StartApp) from Appointments as Tab  where Appointments.DoctorId=Tab.DoctorId)))>30
+ORDER BY TimeBreak desc
+
+FirstName	LastName	name	StartBreak	EndBreak	TimeBreak
+Владимитр	Данилов	Хирургическое	2020-03-16 11:20:00	2020-03-16 16:40:00	320
+Владимитр	Данилов	Хирургическое	2020-03-16 11:20:00	2020-03-16 16:40:00	320
+Андрей	Иванов	Кардиологическое	2020-03-16 10:10:00	2020-03-16 15:00:00	290
+Андрей	Иванов	Кардиологическое	2020-03-16 10:10:00	2020-03-16 15:00:00	290
+Людмила	Тихомирова	Терапевтическое	2020-03-16 10:10:00	2020-03-16 14:10:00	240
+Людмила	Тихомирова	Терапевтическое	2020-03-16 10:10:00	2020-03-16 14:10:00	240
+Николай	Семёнов	Травмотрология	2020-03-16 11:20:00	2020-03-16 14:40:00	200
+Николай	Семёнов	Травмотрология	2020-03-16 11:20:00	2020-03-16 14:40:00	200
+Александр	Скворцов	Терапевтическое	2020-03-16 09:30:00	2020-03-16 10:50:00	80
+Александр	Скворцов	Терапевтическое	2020-03-16 09:30:00	2020-03-16 10:50:00	80
+Петр	Колесник	Хирургическое	2020-03-16 12:20:00	2020-03-16 13:10:00	50
+Петр	Колесник	Хирургическое	2020-03-16 12:20:00	2020-03-16 13:10:00	50
+------------------------------------------------------------
+- список врачей, по каждому указано количество посетивших его пациентов за все время, среднее число пациентов в месяц, самый частый диагноз, в порядке убывания среднего числа пациентов за месяц
+use hospital;
+SELECT 
+Doctors.FirstName as DoctorsFirstName,
+Doctors.LastName as DoctorsLastName,
+count(DISTINCT Patients.Id) as QuantityVisitors
+
+FROM Doctors, Appointments,Patients,Diagnoses
+where Doctors.Id=Appointments.DoctorId and Patients.Id=Appointments.PatientId and Diagnoses.Id=Appointments.DiagnosisId
+group by Doctors.FirstName, Doctors.LastName
+order by Doctors.FirstName, Doctors.LastName
+
+DoctorsFirstName	DoctorsLastName	QuantityVisitors
+Александр	Скворцов	2
+Андрей	Иванов	2
+Владимитр	Данилов	1
+Лариса	Анреева	2
+Людмила	Тихомирова	1
+Николай	Семёнов	2
+Петр	Колесник	2
+Татьяна	Самсонова	1
+
+
+
+use hospital;
+SELECT 
+Doctors.FirstName as DoctorsFirstName,
+Doctors.LastName as DoctorsLastName,
+Diagnoses.Diagnosis, 
+count( Diagnosis) as Frequency into FrequentDiagnosis
+FROM Appointments,Patients,Diagnoses, Doctors
+where Doctors.Id=Appointments.DoctorId and Patients.Id=Appointments.PatientId and Diagnoses.Id=Appointments.DiagnosisId
+group by Doctors.FirstName, Doctors.LastName, Diagnoses.Diagnosis
+order by Doctors.FirstName, Doctors.LastName
+
+
+SELECT *
+ FROM FrequentDiagnosis as Tab
+  where Frequency=
+ (SELECT max(Frequency) FROM FrequentDiagnosis
+ where FrequentDiagnosis.DoctorsFirstName=Tab.DoctorsFirstName
+ )
+  order by DoctorsFirstName, DoctorsLastName
+  
+  DoctorsFirstName	DoctorsLastName	Diagnosis	Frequency
+Александр	Скворцов	Диарея	1
+Александр	Скворцов	ОРВ	1
+Андрей	Иванов	Аритмия	1
+Андрей	Иванов	Тахикардия	1
+Владимитр	Данилов	Ушиб	1
+Владимитр	Данилов	Растяжение	1
+Лариса	Анреева	Растяжение	1
+Лариса	Анреева	Ушиб	1
+Людмила	Тихомирова	ОРВ	1
+Людмила	Тихомирова	Грыжа	1
+Николай	Семёнов	Перелом	2
+Петр	Колесник	Растяжение	1
+Петр	Колесник	Ушиб	1
+Татьяна	Самсонова	Аритмия	1
+  ------------------------------------------------------------
+- число пациентов, проходящих прием, сгруппированных по времени прихода с 7-10, 10-13, 13-16, 16-19  
+
+use hospital;
+CREATE TABLE NumberAppointments
+(             
+	Id INT IDENTITY PRIMARY KEY,
+	PeriodTime NVARCHAR(20),
+	Number INT
+)
+Insert INTO NumberAppointments VALUES
+('number 7-10', (SELECT count(StartApp) FROM Appointments
+where StartApp BETWEEN '2020-03-16 07:00:00' and '2020-03-16 09:59:59')),
+
+('number 10-13', (SELECT count(StartApp) FROM Appointments
+where StartApp BETWEEN '2020-03-16 10:00:00' and '2020-03-16 12:59:59')),
+
+('number 13-16', (SELECT count(StartApp) FROM Appointments
+where StartApp BETWEEN '2020-03-16 13:00:00' and '2020-03-16 15:59:59')),
+
+('number 16-19', (SELECT count(StartApp) FROM Appointments
+where StartApp BETWEEN '2020-03-16 16:00:00' and '2020-03-16 19:00:00'))
+
+select * from NumberAppointments
+
+Id	PeriodTime	Number
+1	number 7-10	2
+2	number 10-13	7
+3	number 13-16	5
+4	number 16-19	1
