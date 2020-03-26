@@ -1,0 +1,18 @@
+﻿ select  doctors.firstname as DoctorFN, doctors.lastname as DoctorLN,   max(patients.age) as max_age
+
+      from  Appointments
+      join    doctors on appointments.doctorid=doctors.id
+      join    Patients  on  appointments.patientid=patients.id
+
+      group by   doctors.firstname, doctors.lastname
+
+
+DOCTORFN     DOCTORLN     MAX_AGE     
+Александр     Скворцов     67     
+Андрей     Иванов     54     
+Владимитр     Данилов     22     
+Лариса     Анреева     67     
+Людмила     Тихомирова     32     
+Николай     Семёнов     36     
+Петр     Колесник     54     
+Татьяна     Самсонова     54    
