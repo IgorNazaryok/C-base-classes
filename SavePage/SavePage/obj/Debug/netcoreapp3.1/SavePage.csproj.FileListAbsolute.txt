@@ -1,0 +1,13 @@
+D:\VisualStudio\report\SavePage\SavePage\bin\Debug\netcoreapp3.1\SavePage.exe
+D:\VisualStudio\report\SavePage\SavePage\bin\Debug\netcoreapp3.1\SavePage.deps.json
+D:\VisualStudio\report\SavePage\SavePage\bin\Debug\netcoreapp3.1\SavePage.runtimeconfig.json
+D:\VisualStudio\report\SavePage\SavePage\bin\Debug\netcoreapp3.1\SavePage.runtimeconfig.dev.json
+D:\VisualStudio\report\SavePage\SavePage\bin\Debug\netcoreapp3.1\SavePage.dll
+D:\VisualStudio\report\SavePage\SavePage\bin\Debug\netcoreapp3.1\SavePage.pdb
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.csprojAssemblyReference.cache
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.csproj.CoreCompileInputs.cache
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.AssemblyInfoInputs.cache
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.AssemblyInfo.cs
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.dll
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.pdb
+D:\VisualStudio\report\SavePage\SavePage\obj\Debug\netcoreapp3.1\SavePage.genruntimeconfig.cache
