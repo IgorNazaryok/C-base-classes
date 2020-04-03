@@ -1,0 +1,26 @@
+D:\VisualStudio\report\Server\Server\bin\Debug\netcoreapp3.1\Server.exe
+D:\VisualStudio\report\Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+D:\VisualStudio\report\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+D:\VisualStudio\report\Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+D:\VisualStudio\report\Server\Server\bin\Debug\netcoreapp3.1\Server.dll
+D:\VisualStudio\report\Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.dll
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
+D:\VisualStudio\report\Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+D:\VisualStudio\report\Simple Server\Server\bin\Debug\netcoreapp3.1\Server.exe
+D:\VisualStudio\report\Simple Server\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+D:\VisualStudio\report\Simple Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+D:\VisualStudio\report\Simple Server\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
+D:\VisualStudio\report\Simple Server\Server\bin\Debug\netcoreapp3.1\Server.dll
+D:\VisualStudio\report\Simple Server\Server\bin\Debug\netcoreapp3.1\Server.pdb
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.csprojAssemblyReference.cache
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.dll
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.pdb
+D:\VisualStudio\report\Simple Server\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
