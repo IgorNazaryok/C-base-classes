@@ -1,0 +1,13 @@
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.csprojAssemblyReference.cache
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.csproj.CoreCompileInputs.cache
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.AssemblyInfoInputs.cache
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.AssemblyInfo.cs
+C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.exe
+C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.deps.json
+C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.runtimeconfig.json
+C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.runtimeconfig.dev.json
+C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.dll
+C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.pdb
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.dll
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.pdb
+C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.genruntimeconfig.cache

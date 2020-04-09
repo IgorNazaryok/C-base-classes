@@ -1,0 +1,13 @@
+D:\report\AsyncTest\AsyncTest\bin\Debug\netcoreapp3.1\AsyncTest.exe
+D:\report\AsyncTest\AsyncTest\bin\Debug\netcoreapp3.1\AsyncTest.deps.json
+D:\report\AsyncTest\AsyncTest\bin\Debug\netcoreapp3.1\AsyncTest.runtimeconfig.json
+D:\report\AsyncTest\AsyncTest\bin\Debug\netcoreapp3.1\AsyncTest.runtimeconfig.dev.json
+D:\report\AsyncTest\AsyncTest\bin\Debug\netcoreapp3.1\AsyncTest.dll
+D:\report\AsyncTest\AsyncTest\bin\Debug\netcoreapp3.1\AsyncTest.pdb
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.csprojAssemblyReference.cache
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.csproj.CoreCompileInputs.cache
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.AssemblyInfoInputs.cache
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.AssemblyInfo.cs
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.dll
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.pdb
+D:\report\AsyncTest\AsyncTest\obj\Debug\netcoreapp3.1\AsyncTest.genruntimeconfig.cache
