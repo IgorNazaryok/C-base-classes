@@ -11,3 +11,16 @@ C:\Users\Garik\source\repos\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.p
 C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.dll
 C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.pdb
 C:\Users\Garik\source\repos\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.genruntimeconfig.cache
+D:\report\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.exe
+D:\report\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.deps.json
+D:\report\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.runtimeconfig.json
+D:\report\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.runtimeconfig.dev.json
+D:\report\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.dll
+D:\report\SyncTest\SyncTest\bin\Debug\netcoreapp3.1\SyncTest.pdb
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.csprojAssemblyReference.cache
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.csproj.CoreCompileInputs.cache
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.AssemblyInfoInputs.cache
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.AssemblyInfo.cs
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.dll
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.pdb
+D:\report\SyncTest\SyncTest\obj\Debug\netcoreapp3.1\SyncTest.genruntimeconfig.cache

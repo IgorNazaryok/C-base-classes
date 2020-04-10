@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Garik\\source\\repos\\SyncTest\\SyncTest\\SyncTest.csproj",
+      "projectUniqueName": "D:\\report\\SyncTest\\SyncTest\\SyncTest.csproj",
       "projectName": "SyncTest",
-      "projectPath": "C:\\Users\\Garik\\source\\repos\\SyncTest\\SyncTest\\SyncTest.csproj",
+      "projectPath": "D:\\report\\SyncTest\\SyncTest\\SyncTest.csproj",
       "packagesPath": "C:\\Users\\Garik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Garik\\source\\repos\\SyncTest\\SyncTest\\obj\\",
+      "outputPath": "D:\\report\\SyncTest\\SyncTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Garik\\AppData\\Roaming\\NuGet\\NuGet.Config",
