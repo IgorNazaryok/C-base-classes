@@ -1,0 +1,290 @@
+﻿@{
+    ViewData["Title"] = "My";
+}
+<h1>@ViewData["Title"]</h1>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        * {
+            -moz-box-sizing: border-box; /* Для Firefox */
+            -webkit-box-sizing: border-box; /* Для Safari и Chrome */
+            box-sizing: border-box; /* Для IE и Opera */
+            font-family: Geneva, Arial, Helvetica, sans-serif;
+
+        }
+
+        form {
+            width: 550px; /* Ширина */
+            height: 100%; /* Высота */
+            box-shadow: 0 0 15px 2px rgba(0, 0, 0, .5);
+        }
+
+        .p1 {
+            background: #f1f2f7; /* Цвет фона заголовка*/
+            font-size: 22px;
+            height: 65px; /* Высота */
+        }
+
+        .p2 {
+            background: linear-gradient(to bottom, #f9faff, #faf9fe);
+            height: 123px; /* Высота */
+        }
+
+        .p3 {
+            background: linear-gradient(to bottom, #faf9fe, #f6f3fa);
+            height: 206px; /* Высота */
+
+        }
+
+        .p4 {
+            background: linear-gradient(to bottom, #f6f3fa, #ebeaf0);
+            height: 215px; /* Высота */
+            padding: 12px 25px;
+
+
+        }
+
+        .p5 {
+            background: #e4e3e9;
+            height: 75px; /* Высота */
+        }
+
+        .brd-bot {
+            border-bottom: 1.5px solid #dad9df;
+
+        }
+
+        div {
+            padding: 25px; /* поля вокруг текста */
+        }
+
+        .inp {
+            padding: 7px 10px;
+            border: 2px solid #e7e6eb;
+            outline: none;
+            height: 35px;
+            margin-top: -5px;
+
+        }
+
+        .inp_country {
+            width: 39%;
+            margin-right: 5%;
+        }
+
+        .inp_city {
+            width: 30%;
+            margin-right: 5%;
+        }
+
+        .inp_post {
+            float: right;
+            width: 20%;
+        }
+
+        .inp::placeholder {
+            color: #999;
+        }
+
+        .inp__fullwidth {
+            width: 100%;
+        }
+
+        .inp__card {
+            width: 82%;
+        }
+
+        .inp__cvv {
+            width: 12%;
+            float: right;
+        }
+
+        .inp_month {
+            width: 35%;
+
+        }
+
+        .inp_year {
+            width: 21%;
+            float: right;
+        }
+
+        .inp__double {
+            width: calc(50% - 10px);
+        }
+
+        .inp__double:nth-child(2n) {
+            float: right;
+        }
+
+        .country-item .inp {
+            width: 100%;
+        }
+
+        .area {
+            resize: none;
+            height: 70px;
+        }
+
+
+        .radio-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .radio-item {
+            display: inline-block;
+        }
+
+        .radio-item:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .inp-radio {
+            display: none;
+        }
+
+        .radio-label {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+            top: -4px;
+            font-size: 80%;
+        }
+
+        .radio-label:before,
+        .radio-label:after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .radio-label:before {
+            height: 12px;
+            width: 12px;
+            background: white;
+            border: 1px solid #dad9df;
+            top: 0;
+            left: 0;
+        }
+
+        .radio-label:after {
+            background: #a443bc;
+            height: 6px;
+            width: 6px;
+            top: 4px;
+            left: 4px;
+            opacity: 0;
+        }
+
+        .inp-radio:checked + .radio-label:before {
+            border: 1px solid #a443bc;
+        }
+
+        .inp-radio:checked + .radio-label:after {
+            opacity: 1;
+        }
+
+        .inp__submit {
+            background: #b85fc9;
+            color: #fff;
+            border: none;
+            height: 34px;
+            width: 91px;
+            padding: 7px;
+            float: right;
+        }
+
+        .Expiration {
+            font-size: 70%;
+            color: #777677;
+            padding-right: 110px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<form name="Form" action="" metod="post">
+
+    <div class="brd-bot p1">
+        <label>Checkout form </label>
+    </div>
+
+    <div class="brd-bot p2">
+        <input class="inp inp__double" type="text" placeholder="First name" id="name1" maxlength=10"/>
+        <input class="inp inp__double" type="text" placeholder="Last name" id="name2" maxlength=10"/><br><br>
+        <input class="inp inp__double" type="text" placeholder="E-mail" id="name3" maxlength=10"/>
+        <input class="inp inp__double" type="text" placeholder="Phone" id="name4" maxlength=10"/>
+    </div>
+
+    <div class="brd-bot p3">
+
+        <input class="inp inp_country" type="text" placeholder="Country" id="сountry" maxlength=15"
+               list="сountry_list"/>
+        <datalist id="сountry_list">
+            <option>Germany</option>
+            <option>France</option>
+            <option>Spain</option>
+            <option>Turkey</option>
+            <option>Argentina</option>
+        </datalist>
+
+        <input class="inp inp_city" type="text" placeholder="City" id="name5" maxlength=10"/>
+
+        <input class="inp inp_post" type="text" placeholder="Post code" id="name6" maxlength=5"/><br><br>
+
+
+        <input class="inp inp__fullwidth" type="text" placeholder="Address" id="address" width="900"/><br><br>
+
+        <textarea class="inp inp__fullwidth area" placeholder="Additional info" id="additional"
+                  maxlength=1000"></textarea>
+    </div>
+
+    <div class="brd-bot p4">
+        <ul class="radio-list">
+            <li class="radio-item">
+                <input class="inp-radio" id="visa" type="radio" name="State"/>
+                <label class="radio-label" for="visa">Visa </label>
+            </li>
+            <li class="radio-item">
+                <input id="mcard" class="inp-radio" type="radio" name="State"/>
+                <label for="mcard" class="radio-label">MasterCard </label>
+            </li>
+            <li class="radio-item">
+                <input id="paypal" class="inp-radio" type="radio" name="State"/>
+                <label for="paypal" class="radio-label">PayPal</label>
+            </li>
+        </ul>
+
+        <input class="inp inp__fullwidth" type="text" placeholder="Name on card" id="naneCard1" maxlength=100"/><br><br>
+        <input class="inp inp__card" type="text" placeholder="Card numberd" id="cardNamber" maxlength=100"/>
+        <input class="inp inp__cvv" type="password" placeholder="CVV2" id="naneCard2" maxlength=3"/<br> <br><br>
+
+        <label class="Expiration">Expiration date</label>
+        <input class="inp inp_month" type="text" placeholder="Month" id="month" list="month_list"/>
+
+        <datalist id="month_list">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </datalist>
+
+        <input class="inp inp_year" type="text" placeholder="Year" id="year" maxlength=4"/>
+    </div>
+    <div class="back p5">
+        <input class="inp__submit" type="submit" value="Continue"/><br><br>
+    </div>
+</form>
+</body>
