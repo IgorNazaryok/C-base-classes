@@ -1,0 +1,26 @@
+﻿
+@model HelloMVCapllication.Models.User
+
+
+<h2>Добро пожаловать на страницу опроса.</h2>
+
+<form asp-action="Logging" asp-controller="Home">
+    <div>
+        <div class="form-group">
+            <label asp-for="UserName"></label>
+            <input type="text" asp-for="UserName" class="form-control form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Вход" class="btn btn-outline-secondary" />
+        </div>
+    </div>
+</form>
+<h5>Для участия в опросе ввойтите в приложение или зарегистрируйтесь</h5>
+
+<p>
+    <a asp-controller="Home" asp-action="Create">Регистрация</a>
+</p>
