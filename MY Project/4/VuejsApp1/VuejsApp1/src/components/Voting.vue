@@ -1,20 +1,22 @@
 ﻿<template>
     <section>
         <div>
-            <h4>{{ activeQuestion.questionText }}</h4>
+            <button @click="GetActiveQuestionsAnswer($route.params.id)">Загрузить список вопросов </button>
+            <h4 id="question">{{ activeQuestion.questionText }}</h4>
             <ul class="radio-list">
                 <li v-for="(activeAnswer, id) in activeAnswers" :key="id">
-                    <p id="block1">
+                    <p id="answer">
                         {{ activeAnswer.answerText }}
                         <button :value="activeAnswer.id" onclick="alert(this.value)">Проголосовать</button>
                     </p>
                 </li>
             </ul>
             <p v-show="initialVisible">
-                <label>Добавить свой вариант:</label><br />
+                <label>Добавить свой вариант ответа:</label><br />
                 <input class="text" type="text" v-model="newAnswer" />
-                <button @click="SendAnswer()">Добавить</button>
+                <button @click="addAnswer(newAnswer)">Добавить</button>
             </p>
+            <!--<h2>quastions № {{$route.params.id }}</h2>-->
 
         </div>        
     </section>
@@ -25,35 +27,57 @@
         
         data() {
             return {
-                newAnswer: "",               
+                newAnswer: "",
+                activeQuestion: "",
+                activeQuestionId: "",
+                activeAnswers: "",
+                initialVisible: false,
             }
-        },
-        props: ['activeQuestion', 'activeAnswers', 'initialVisible'],
+        },      
         
             
         methods: {
-            SendAnswer() {
-                this.$emit('Send-Answer', this.newAnswer);
-
+            
+            GetActiveQuestionsAnswer(value) {
+                this.initialVisible = true;
+                this.activeQuestionId = Number(value);
+                fetch("https://localhost:44319/questions/" + value).then(response => response.json())
+                    .then(commits => this.activeQuestion = commits);
+                fetch("https://localhost:44319/answers/" + value).then(response => response.json())
+                    .then(commits => this.activeAnswers = commits);
+            },
+            addAnswer(value) {
+                fetch("https://localhost:44319/answers/",
+                    {
+                        method: 'POST',
+                        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                        body: JSON.stringify({ answerText: value, QuestionId: this.activeQuestionId })
+                    });
+                    fetch("https://localhost:44319/answers/" + this.activeQuestionId).then(response => response.json())
+                    .then(commits => this.activeAnswers = commits);
+               
             },
             
         }
     } 
 </script>
 <style>
-    #block1 {
+    #answer {
         width: 30%;
-        border: 1px solid gray;
+        border: none;
         border-radius: 10px;
         margin: 10px;
         padding: 10px;
         background-color: silver;
     }
 
-    #block2 {
-        border: none;
-        margin: 10px;
-        padding: 10px;
+    #question {
+        width: 40%;
+        height: 30px;        
+        border: none;        
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
     }
 
     .radio-list {

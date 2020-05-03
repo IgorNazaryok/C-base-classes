@@ -3,9 +3,7 @@
         <div class="container">
             <ul>
                 <li><router-link to="/" exact>QuestionList</router-link></li>
-                <li><router-link to="/logining">Authorization</router-link></li>
-                <li><router-link to="/voting">Voting</router-link></li>
-                
+                <li><router-link to="/logining">Authorization</router-link></li>               
             </ul>
             <slot></slot>
         </div>
@@ -19,9 +17,11 @@
     import Voting from './Voting.vue'
     import VueRouter from 'vue-router';
     const routes = [
-        { path: '/', component: Home },        
-        { path: '/voting', component: Voting },
-        { path: '/logining', component: Authorization }
+        { path: '/', component: Home }, 
+        { path: '/logining', component: Authorization },
+        { path: '/voting/:id', component: Voting, name: 'voting'},
+        
+        
     ];
     
     const router = new VueRouter({
